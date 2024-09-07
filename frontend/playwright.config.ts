@@ -26,7 +26,7 @@ if (process.env.CI) {
 
 export default defineConfig({
   /** By removing OS related info, we can use same snapshots across different OS. */
-  snapshotPathTemplate: `.screenshots/{testFilePath}/{arg}{ext}`,
+  snapshotPathTemplate: `frontend/.screenshots/{testFilePath}/{arg}{ext}`,
 
   testDir: "./tests",
   /* Run tests in files in parallel */
