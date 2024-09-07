@@ -1,0 +1,49 @@
+{
+  "name": "playwright-sandbox",
+  "version": "1.0.0",
+  "description": "My Playground for learning Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:unit": "npx playwright test --grep @unit-test",
+    "test:dev": "NODE_ENV=dev npx playwright test --grep @config",
+    "test:test": "NODE_ENV=test npx playwright test --grep @config",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "prettier": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
+    "prepare": "husky install"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "test"
+  ],
+  "author": "Power Tester",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^20.11.10",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.5.2",
+    "husky": "^9.0.7",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.2.4",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{ts,js,json,yml,css,md}": "npx prettier --write ."
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "config": "^3.3.11",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.1",
+    "pg": "^8.11.3"
+  }
+}
