@@ -28,6 +28,9 @@ jobs:
       #   run: npx playwright install --with-deps
       #   working-directory: frontend
 
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Run changed Playwright tests
         run: npx playwright test --project=chromium --only-changed=origin/$GITHUB_BASE_REF
         if: github.event_name == 'pull_request'
